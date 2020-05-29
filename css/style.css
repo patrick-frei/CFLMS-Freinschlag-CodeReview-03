@@ -9,69 +9,46 @@ header {
 	z-index: 1;
 }
 #header-top {
-	width:  100%;
+  padding: 2em;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
 	background-color: #CABBB7;
-	height: 10em;
-}
-#title-wrapper {
-	width: 70%;
-	height: 100%;
-	float: left;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-#logo-wrapper {
-	width:  30%;
-	height:  100%;
-	float: right;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-#title-wrapper h1 {
-	display: inline;
-	vertical-align: middle;
-	text-align: center;
-	max-width: 80%;
-	font-family: "Courier Prime", monospace;
-	font-size: 2.5em;
-}
-#logo-wrapper img {
-	max-height: 70%;
-	max-width: 80%;
-	min-width: 180px;
-	vertical-align: middle;
 }
 #header-navbar nav {
-	width:  100%;
 	background-color: #C65252;
-	height: 3em;
-	display: flex;
-	align-items: center;
 }
 #header-navbar ul {
-	overflow: hidden;
 	list-style: none;
-	display: inline-block;
 	padding: 0;
-	margin: 0 40px 0 auto;
-	height: 100%;
+	margin: 0;
 }
 #header-navbar li {
-	float: right;
-	height: 100%;
-	display: flex;
-	align-items: center;
+	display: inline-block;
 }
 #header-navbar a {
 	text-decoration: none;
 	color: #fff;
 	font-size: 1.4em;
-	padding: 10px 30px;
+  padding: 0.5em 1.5em;
+  margin: 0;
 	font-weight: bold;
 	display: flex;
+  justify-content: center;
 }
-#header-navbar a:hover {
-	border-bottom: 8px solid #CABBB7;
+
+@media only screen and (max-width: 480px) {
+  #header-top {
+    justify-content: center;
+    padding: 0.5em;
+  }
+  #header-top img {
+    margin: 0.5em;
+    max-width: 100%;
+    object-fit: contain;
+  }
+  #header-navbar li {
+    width: 50%;
+  }
 }
