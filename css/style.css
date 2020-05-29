@@ -46,9 +46,8 @@ header {
   #header-top img {
     margin: 0.5em;
     max-width: 100%;
-    object-fit: contain;
   }
   #header-navbar li {
-    width: 50%;
+    display: block;
   }
 }
