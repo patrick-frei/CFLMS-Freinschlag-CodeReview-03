@@ -1,13 +1,13 @@
-function calculateInsurance(country, horsepower, age) {
+function calculateInsurance(fullname, country, horsepower, age) {
   switch (country) {
     case "Austria":
-      return `Your quote is ${Math.round((horsepower * 100 / age + 50)*100)/100}€ per year.`
+      return `${fullname}, your insurance costs are €${Math.round((horsepower * 100 / age + 50)*100)/100} per year.`
       break
     case "Hungary":
-      return `Your quote is ${Math.round((horsepower * 120 / age + 100)*100)/100}€ per year.`
+      return `${fullname}, your insurance costs are €${Math.round((horsepower * 120 / age + 100)*100)/100} per year.`
       break
     case "Greece":
-      return `Your quote is ${Math.round((horsepower * 150 / (age + 3) + 50)*100)/100}€ per year.`
+      return `${fullname}, your insurance costs are €${Math.round((horsepower * 150 / (age + 3) + 50)*100)/100} per year.`
   }
 }
 
@@ -31,5 +31,5 @@ document.getElementById("calculate").addEventListener("click", function(a){
       return
     }
     country = document.getElementById("country").value
-    document.getElementById("result").innerHTML = calculateInsurance(country, horsepower, age)
+    document.getElementById("result").innerHTML = calculateInsurance(fullName, country, horsepower, age)
 });

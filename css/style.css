@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 html {
 	height: 100%;
 }
@@ -28,7 +29,7 @@ footer {
   margin: 0;
 	display: flex;
   justify-content: center;
-  color: #fff;
+  color: #FFF;
 }
 #header-top {
   padding: 2em;
@@ -45,32 +46,61 @@ footer {
 	font-size: 1.4em;
 	font-weight: bold;
 }
-#content {
+.content {
   background-image: url("../img/traffic-332857_1920.jpg");
   background-repeat: no-repeat;
 	background-size: cover;
 	margin: 0;
-	padding: 0;
+	padding: 3em;
 }
-#content h1 {
+.content h1 {
   color: #FFF;
   font-size: 4em;
   margin: 3% 6%;
 }
-#calculator {
+.frame {
   padding: 5%;
   margin: 3% 6%;
-  border: 2px solid #eee;
+  border: 2px solid #EEE;
   border-radius: 1em;
   background: rgba(255,255,255,0.9)
 }
-#calculator h3 {
+.frame h3 {
   text-align: center;
   font-size: 3em;
   font-weight: normal;
   padding: 0 10%;
 }
-#calculator-form {
+.member {
+	flex-basis: 30%;
+	min-width: 10em;
+	margin: 1em;
+	border: 1px solid #AAA;
+	text-align: center;
+	background-color: #FFF;
+	cursor: pointer;
+}
+.member img {
+	padding: 0.5em;
+	width: 100%;
+	min-height: 10em;
+	max-height: 25em;
+	object-fit: cover;
+	object-position: top;
+	box-sizing: border-box;
+}
+.member p {
+	margin: 0 0 1em 0;
+	padding: 0;
+}
+.hidden {
+	display: none;
+}
+#name {
+	font-family: 'Permanent Marker', cursive;
+	font-size: 1.2em;
+}
+#calculator-form, #team {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
@@ -95,8 +125,8 @@ footer {
   margin-top: 2em;
   padding: 0.5em;
   background-color: #4CAF50;
-  color: #fff;
-  border: 1px solid #aaa;
+  color: #FFF;
+  border: 1px solid #AAA;
   border-radius: 0.5em;
   font-size: 1em;
 }
@@ -114,11 +144,12 @@ footer {
   margin: 0.5em 1.5em 0.5em auto;
 }
 #footer-info {
-  color: #fff;
+  color: #FFF;
   text-align: center;
   padding: 1.5em;
 }
-@media only screen and (max-width: 480px) {
+
+@media only screen and (max-width: 768px) {
   #header-top {
     justify-content: center;
     padding: 0.5em;
@@ -127,7 +158,27 @@ footer {
     margin: 0.5em;
     max-width: 100%;
   }
+	.content h1 {
+	  font-size: 2em;
+		text-align: center;
+	}
+	.frame h3 {
+	  font-size: 2em;
+		text-align: center;
+	}
+}
+
+@media only screen and (max-width: 480px) {
   #header-navbar li {
     display: block;
   }
+	.content h1 {
+	  font-size: 1.5em;
+	}
+	.frame h3 {
+	  font-size: 1em;
+	}
+	#result {
+	  font-size: 1em;
+	}
 }
