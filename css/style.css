@@ -91,7 +91,7 @@ header {
 .hidden {
 	display: none;
 }
-#name {
+.name {
 	font-family: 'Permanent Marker', cursive;
 	font-size: 1.2em;
 }
